@@ -28,3 +28,16 @@ examples/exp*
 .claude/
 *.wav
 *.jsonl
+
+# Local Windows setup (this machine)
+# Downloaded model weights (~3 GB) and NVIDIA driver staging are reproducible
+# from .download_model.ps1 / .install_gpu_driver.ps1 — never commit them.
+/models/
+/nvwmi/
+/outputs/
+*.log
+
+# `/run*` above is meant to ignore the run/ output directory, but it also
+# swallows run_local.py — the Windows launcher this checkout depends on.
+/run*/
+!/run_local.py
